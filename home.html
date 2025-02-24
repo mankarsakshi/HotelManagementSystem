@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: aquamarine;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .nav{
+            position: relative;
+            left: +180px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .menu-section {
+            margin-bottom: 20px;
+        }
+
+        .menu-section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            color: #444;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+
+        .menu-item span {
+            font-size: 16px;
+            flex: 1;
+        }
+
+        .menu-item .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .menu-item button {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .menu-item button:hover {
+            background-color: #e6b800;
+        }
+
+        .cart {
+            margin-top: 20px;
+            background-color: #fff8e1;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart h3 {
+            margin: 0 0 10px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+        }
+
+        .cart-item span {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav ">
+        <a href="index.html">Home</a>
+        <a href="home.html">Menu</a>
+        <a href="About.html">About</a>
+        <a href="location.html" class="active">Location</a>
+        <a href="contact.html">Contact</a>
+        
+    </div>
+
+    <div class="container">
+        <div class="menu-section">
+            <h2>Starters</h2>
+            <div class="menu-item">
+                <img src="images/tomato-soup.jpeg" alt="Tomato Soup">
+                <span>Tomato Soup</span>
+                <div class="buttons">
+                    <button onclick="addToCart('Tomato Soup', 5)">Add to Cart</button>
+                    <button onclick="buyNow('Tomato Soup', 5)">Buy Now</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/springroll.jpeg" alt="Spring Rolls">
+                <span>Spring Rolls</span>
+                <div class="buttons">
+                    <button onclick="addToCart('Spring Rolls', 7)">Add to Cart</button>
+                    <button onclick="buyNow('Spring Rolls', 7)">Buy Now</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/paneertikka.jpeg" alt="paneer tikka">
+                <span>Paneer Tikka</span>
+                <div class="buttons">
+                    <button onclick="addToCart('paneertikka', 12)">Add to Cart</button>
+                    <button onclick="buyNow('paneertikka', 12)">Buy Now</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/potatokabab.jpeg" alt="potato kabab">
+                <span>potatokabab</span>
+                <div class="buttons">
+                    <button onclick="addToCart('potatokabab', 7)">Add to Cart</button>
+                    <button onclick="buyNow('potatokabab', 7)">Buy Now</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/idli_chaat_recipe.jpeg" alt="idli_chaat">
+                <span>idli_chaat</span>
+                <div class="buttons">
+                    <button onclick="addToCart('idli_chaat', 9)">Add to Cart</button>
+                    <button onclick="buyNow('idli_chaat', 9)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Main Course</h2>
+            <div class="menu-item">
+                <img src="images/chickenBiryani.jpeg" alt="Chicken Biryani">
+                <span> Chicken Biryani</span>
+                <div class="buttons">
+                    <button onclick="addToCart('Chicken Biryani', 12)">Add to Cart</button>
+                    <button onclick="buyNow('Chicken Biryani', 12)">Buy Now</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/chickenMasala.jpeg" alt="Chicken Masala">
+                <span>Chicken Masala</span>
+                <div class="buttons">
+                    <button onclick="addToCart('chickenMasala', 10)">Add to Cart</button>
+                    <button onclick="buyNow('chickenMasala', 10)">Buy Now</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/chanaMasala.jpeg" alt="Chana Masala">
+                <span>Chana Masala</span>
+                <div class="buttons">
+                    <button onclick="addToCart('Chana Masala', 10)">Add to Cart</button>
+                    <button onclick="buyNow('Chana Masala', 10)">Buy Now</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/VegBiryani.jpeg" alt="Veg Biryani">
+                <span>Veg Biryani</span>
+                <div class="buttons">
+                    <button onclick="addToCart('Veg Biryani', 10)">Add to Cart</button>
+                    <button onclick="buyNow('Veg Biryani', 10)">Buy Now</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/food3.png" alt="Veg Pizza">
+                <span>Veg Pizza</span>
+                <div class="buttons">
+                    <button onclick="addToCart('Veg Pizza', 10)">Add to Cart</button>
+                    <button onclick="buyNow('Veg Pizza', 10)">Buy Now</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/FFishfry.jpeg" alt="FishFry">
+                <span>FishFry</span>
+                <div class="buttons">
+                    <button onclick="addToCart('FishFry', 10)">Add to Cart</button>
+                    <button onclick="buyNow('FishFry', 10)">Buy Now</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/fishCurry.jpeg" alt="fishCurry">
+                <span>fishCurry</span>
+                <div class="buttons">
+                    <button onclick="addToCart('fishCurry', 10)">Add to Cart</button>
+                    <button onclick="buyNow('fishCurry', 10)">Buy Now</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/PaneerMasala.jpeg" alt="PaneerMasala">
+                <span>PaneerMasala</span>
+                <div class="buttons">
+                    <button onclick="addToCart('PaneerMasala', 10)">Add to Cart</button>
+                    <button onclick="buyNow('PaneerMasala', 10)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Desserts</h2>
+            <div class="menu-item">
+                <img src="images/chocklateCake.jpeg" alt="Chocolate Cake">
+                <span>Chocolate Cake</span>
+                <div class="buttons">
+                    <button onclick="addToCart('Chocolate Cake', 6)">Add to Cart</button>
+                    <button onclick="buyNow('Chocolate Cake', 6)">Buy Now</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/fruitsalad.jpeg" alt="Fruit Salad">
+                <span>Fruit Salad</span>
+                <div class="buttons">
+                    <button onclick="addToCart('Fruit Salad', 4)">Add to Cart</button>
+                    <button onclick="buyNow('Fruit Salad', 4)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart" id="cart">
+            <h3>Your Cart</h3>
+            <div id="cartItems"></div>
+            <p id="totalPrice">Total: $0</p>
+        </div>
+    </div>
+
+    <script>
+        const cartItems = document.getElementById('cartItems');
+        const totalPrice = document.getElementById('totalPrice');
+        let cart = [];
+
+        function addToCart(item, price) {
+            cart.push({ item, price });
+            updateCart();
+        }
+
+        function buyNow(item, price) {
+            alert(`You bought ${item} for $${price}`);
+        }
+
+        function updateCart() {
+            cartItems.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(({ item, price }, index) => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+
+                cartItem.innerHTML = `
+                    <span>${item}</span>
+                    <span>$${price}</span>
+                `;
+                cartItems.appendChild(cartItem);
+
+                total += price;
+            });
+
+            totalPrice.textContent = `Total: $${total}`;
+        }
+    </script>
+</body>
+</html>

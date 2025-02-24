@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Hotel Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: rgb(255, 157, 0);
+        }
+        nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color:black;
+    padding: 5px 10px;
+  }
+
+        header {
+            background:rgb(255, 157, 0);
+            color:black;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+            background-color: rgb(195, 157, 9);;
+        }
+
+        .about-section {
+            background:rgb(195, 157, 9);
+            padding: 2rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .about-section h2 {
+            color: #333;
+            background-color: rgb(195, 157, 9);;
+            
+        }
+
+        .about-section p {
+            margin: 1rem 0;
+        }
+
+        .about-section img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 15px;
+            margin-top: 1rem;
+        }
+
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            background-color: rgb(195, 157, 9);;
+        }
+
+        .team-member {
+            flex: 1 1 calc(33.333% - 2rem);
+            background:rgb(239, 213, 20);
+            padding: 1rem;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1><b><i>Welcome to Our Sakshi's Recipies</i></b></h1>
+</header>
+<nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="home.html">Menu</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="location.html" class="active">Location</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+<div class="container">
+    <div class="about-section">
+        <h2>About Us</h2>
+        <p>Our Hotel Management System is dedicated to providing an exceptional experience for our guests. We strive to combine comfort, convenience, and luxury to create unforgettable memories for everyone who stays with us.</p>
+        <p>With cutting-edge technology, our system ensures seamless management of reservations, room services, and guest experiences. Whether you are planning a business trip or a family vacation, we have got you covered.</p>
+        <img src="images/overview1.jpeg" alt="Hotel Overview">
+    </div>
+
+    <h2>Meet Our Team</h2>
+    <div class="team">
+        <div class="team-member">
+            <img src="images/generalManager.jpeg" alt="Jane Doe">
+            <h3>Vishal Jadhav</h3>
+            <ol>
+                <p>Contact Number:9123876690</p>
+                <p>Email: vishal123@gmail.com</p>
+            </ol>
+            <p>General Manager</p>
+        </div>
+        <div class="team-member">
+            <img src="images/Operationmanager.jpeg" alt="John Smith">
+            <h3>Sanika Nikam</h3>
+            <ol>
+                <p>Contact Number:9123876690</p>
+                <p>Email: sanikanikam123@gmail.com</p>
+            </ol>
+            <p>Operations Manager</p>
+        </div>
+        <div class="team-member">
+            <img src="images/guestrelation.jpeg" alt="Emily Davis">
+            <h3>Nikita Pawar</h3>
+            <ol>
+                <p>Contact Number:9123876690</p>
+                <p>Email: nikitapawar456@gmail.com</p>
+            </ol>
+            <p>Guest Relations</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Sakshi's Recipies. All rights reserved.</p>
+</footer>
+
+<script>
+    // Simple JavaScript functionality to display an alert on page load
+    window.onload = function() {
+        alert('Welcome to the About Us page of our Hotel Management System!');
+    };
+</script>
+
+</body>
+</html>
