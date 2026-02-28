@@ -1,0 +1,1 @@
+The Hotel Management System is a responsive web-based application developed using HTML, CSS, and JavaScript that simplifies hotel operations and enhances user experience. This project focuses on managing room bookings, customer details, and hotel services through an interactive and user-friendly interface.
